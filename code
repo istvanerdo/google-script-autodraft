@@ -4,15 +4,15 @@
 // https://gist.github.com/mderazon
 
 function finalDraft() {
-  var ss = SpreadsheetApp.openById("********");
-  var sheets = ss.getSheets();
-  var sheet = sheets[0];
+  var ss = SpreadsheetApp.openById("********")
+  var sheets = ss.getSheets()
+  var sheet = sheets[0]
 
   // append ".csv" extension to the sheet name
-  fileName = sheet.getName() + ".csv";
+  fileName = sheet.getName() + ".csv"
 
   // convert all available sheet data to csv format
-  var csvFile = convertRangeToCsvFile_(fileName, sheet);
+  convertRangeToCsvFile_(fileName, sheet)
 
   // create draft from csv
   makeDraft(csvFile)
@@ -20,8 +20,8 @@ function finalDraft() {
 
 function convertRangeToCsvFile_(csvFileName, sheet) {
   // get available data range in the spreadsheet
-  var activeRange = sheet.getDataRange();
-  var data = activeRange.getValues();
+  var activeRange = sheet.getDataRange()
+  var data = activeRange.getValues()
   var csvFile = undefined;
 
   // loop through the data in the range and build a string with the csv data
