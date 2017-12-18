@@ -3,7 +3,7 @@
 // it was written by Michael DeRazon:
 // https://gist.github.com/mderazon
 
-function saveAsCSV() {
+function finalDraft() {
   var ss = SpreadsheetApp.openById("********");
   var sheets = ss.getSheets();
   var sheet = sheets[0];
